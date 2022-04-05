@@ -42,8 +42,11 @@ hex_map = {
 def hex_output(hex_number):
     result = 0
     for index, number in enumerate(hex_number):
-        result = result + (hex_map[number] *
-                           (16 ** (len(hex_number) - index - 1)))
+        if number in hex_map:
+            result = result + (hex_map[number] *
+                               (16 ** (len(hex_number) - index - 1)))
+        else:
+            return "Invalid character encountered"
     return result
 
 
@@ -53,5 +56,5 @@ def name_bte(name):
 
 
 if __name__ == "__main__":
-    print(hex_output('2A5'))
+    print(hex_output('2A5#'))
     name_bte('hehehuehue')
