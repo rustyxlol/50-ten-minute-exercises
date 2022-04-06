@@ -13,15 +13,15 @@ Note that while you can write
 a function in Python 3 that defines a parameter after *args, 
 I'd suggest avoiding it and just taking two arguments—a list and an optional starting point.
 
-* ✅ Write a function that takes a list of numbers. It should return the average (i.e.,
+✅ Write a function that takes a list of numbers. It should return the average (i.e.,
 arithmetic mean) of those numbers
 
-* ✅ Write a function that takes a list of words (strings). 
+✅ Write a function that takes a list of words (strings). 
 It should return a tuple containing three integers, 
 representing the length of the shortest word, the length
 of the longest word, and the average word length.
 
-* ✅ Write a function that takes a list of Python objects. Sum the objects that either
+✅ Write a function that takes a list of Python objects. Sum the objects that either
 are integers or can be turned into integers, ignoring the others. 
 """
 
