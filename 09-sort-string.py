@@ -7,13 +7,13 @@ invoking strsort('cba') will be the string abc
 
 BEYOND THE EXERCISE
 
-Given the string “Tom Dick Harry,” break it into individual words, and then sort
+✅ Given the string “Tom Dick Harry,” break it into individual words, and then sort
 those words alphabetically. Once they’re sorted, print them with commas (,)
 between the names.
 
-Which is the last word, alphabetically, in a text file?
+✅ Which is the last word, alphabetically, in a text file?
 
-Which is the longest word in a text file
+✅ Which is the longest word in a text file
 """
 
 
