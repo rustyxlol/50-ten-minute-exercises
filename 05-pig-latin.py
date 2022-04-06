@@ -23,7 +23,7 @@ similarly capitalized.
 ✅ Handle punctuation—If a word ends with punctuation, then that punctuation
 should be shifted to the end of the translated word.
 
-Consider an alternative version of Pig Latin—We don't check to see if the first letter
+✅ Consider an alternative version of Pig Latin—We don't check to see if the first letter
 is a vowel, but, rather, we check to see if the word contains two different vowels.
 If it does, we don't move the first letter to the end. Because the word “wine”
 contains two different vowels (“i” and “e”), we'll add “way” to the end of it, giving us “wineway.” By contrast, the word “wind” contains only one vowel, so we
@@ -35,19 +35,32 @@ handy here.)
 from string import punctuation
 
 
-def checkVowel(letter):
+def isVowel(letter):
     if letter in 'aeiou' or letter in 'AEIOU':
         return True
     return False
 
 
+def isPunctuation(letter):
+    if letter in punctuation:
+        return True
+    return False
+
+
 def pig_latin(word):
-    if word[-1] in punctuation:
-        if checkVowel(word[0]):
+    if isPunctuation(word[-1]):
+        if isVowel(word[0]):
             return word[:-1] + 'way' + word[-1]
         return word[1:-1] + word[0] + 'ay' + word[-1]
 
-    if checkVowel(word[0]):
+    if isVowel(word[0]):
+        return word + 'way'
+    return word[1:] + word[0] + 'ay'
+
+
+def pig_latin_alt(word):
+    vowels = set(['a', 'e', 'i', 'o', 'u'])
+    if len(set(word) & vowels) >= 2:
         return word + 'way'
     return word[1:] + word[0] + 'ay'
 
@@ -56,3 +69,5 @@ if __name__ == "__main__":
     print(pig_latin("Air,"))
     print(pig_latin("Python,"))
     print(pig_latin("computer"))
+    print(pig_latin_alt("wine"))
+    print(pig_latin_alt("wind"))
