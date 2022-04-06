@@ -8,7 +8,7 @@ invoking strsort('cba') will be the string abc
 BEYOND THE EXERCISE
 
 ✅ Given the string “Tom Dick Harry,” break it into individual words, and then sort
-those words alphabetically. Once they’re sorted, print them with commas (,)
+those words alphabetically. Once they're sorted, print them with commas (,)
 between the names.
 
 ✅ Which is the last word, alphabetically, in a text file?
@@ -26,16 +26,18 @@ def strssort(string):
 
 
 def last_word():
-    with open('random.txt') as f:
+    with open('random.txt', encoding='UTF-8') as f:
         data = f.read()
         print(data.split()[-1])
 
 
 def longest_word():
-    with open('random.txt') as f:
+    with open('random.txt', encoding='UTF-8') as f:
         data = f.read()
         max_length = len(max(data.split(), key=len))
-        [print(word) for word in data.split() if len(word) == max_length]
+        for word in data.split():
+            if len(word) == max_length:
+                print(word)
 
 
 if __name__ == "__main__":
