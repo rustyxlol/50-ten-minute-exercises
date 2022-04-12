@@ -1,8 +1,8 @@
 """
 write a function, get_rainfall, that tracks rainfall in a number of cities. 
 Users of your program will enter the name of a city; if the city name is blank, then
-the function prints a report (which I’ll describe) before exiting.
- If the city name isn’t blank, then the program should also ask the user how much
+the function prints a report (which I'll describe) before exiting.
+ If the city name isn't blank, then the program should also ask the user how much
 rain has fallen in that city (typically measured in millimeters). After the user enters
 the quantity of rain, the program again asks them for a city name, rainfall amount,
 and so on—until the user presses Enter instead of typing the name of a city.
@@ -26,12 +26,12 @@ for Boston, you would see that the total was 90 and the average was 30.
 
 ✅ Open a log file from a Unix/Linux system—for example, one from the Apache
 server. For each response code (i.e., three-digit code indicating the HTTP
-request’s success or failure), store a list of IP addresses that generated that code
+request's success or failure), store a list of IP addresses that generated that code
 
-❗ did a very similar one previously, very similar to how the above one works. 
+❗ did a very similar one previously, very similar to how the above one works.
 Read through a text file on disk. Use a dict to track how many words of each
 length are in the file—that is, how many three-letter words, four-letter words,
-five-letter words, and so on. Display your results. 
+five-letter words, and so on. Display your results.
 
 """
 from collections import defaultdict
