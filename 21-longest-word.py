@@ -4,14 +4,14 @@ argument and returns the longest word found in the file. The second function, fi
 _all_longest_words, takes a directory name and returns a dict in which the keys are
 filenames and the values are the longest words from each file
 
-Use the hashlib module in the Python standard library, and the md5 function
+✅ Use the hashlib module in the Python standard library, and the md5 function
 within it, to calculate the MD5 hash for the contents of every file in a userspecified directory. 
 Then print all of the filenames and their MD5 hashes
 
-Ask the user for a directory name. Show all of the files in the directory, as well
+✅ Ask the user for a directory name. Show all of the files in the directory, as well
 as how long ago the directory was modified. 
 
-Open an HTTP server’s log file. (If you lack one, then you can read one from
+✅ Open an HTTP server's log file. (If you lack one, then you can read one from
 me at http://mng.bz/vxxM.) Summarize how many requests resulted in numeric
 response codes—202, 304, and so on.
 """
